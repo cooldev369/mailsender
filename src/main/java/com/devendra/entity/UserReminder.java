@@ -1,4 +1,4 @@
-package com.devendra.model;
+package com.devendra.entity;
 
 import java.util.Date;
 import javax.persistence.Column;
@@ -21,5 +21,13 @@ public class UserReminder {
 	Date expiryDate;
 	@Column(name="days_before")
 	Integer days_before;
+	
+	@Override
+	public String toString() {
+		return "UserReminder [id=" + id + ", email=" + email + ", expiryDate=" + expiryDate + ", days_before="
+				+ days_before + "]";
+	}
+	
+	
 
 }
