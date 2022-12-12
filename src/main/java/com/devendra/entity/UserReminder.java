@@ -13,21 +13,61 @@ import javax.persistence.Table;
 public class UserReminder {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="id")
+	@Column(name = "id")
 	private Integer id;
-	@Column(name="email")
+	@Column(name = "email")
 	String email;
-	@Column(name="expiry_date")
+	@Column(name = "expiry_date")
 	Date expiryDate;
-	@Column(name="days_before")
-	Integer days_before;
-	
+	@Column(name = "days_before")
+	Integer daysBefore;
+	@Column(name = "doc_type")
+	String docType;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Date getExpiryDate() {
+		return expiryDate;
+	}
+
+	public void setExpiryDate(Date expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+
+	public Integer getDaysBefore() {
+		return daysBefore;
+	}
+
+	public void setDaysBefore(Integer daysBefore) {
+		this.daysBefore = daysBefore;
+	}
+
+	public String getDocType() {
+		return docType;
+	}
+
+	public void setDocType(String docType) {
+		this.docType = docType;
+	}
+
 	@Override
 	public String toString() {
-		return "UserReminder [id=" + id + ", email=" + email + ", expiryDate=" + expiryDate + ", days_before="
-				+ days_before + "]";
+		return "UserReminder [id=" + id + ", email=" + email + ", expiryDate=" + expiryDate + ", daysBefore="
+				+ daysBefore + ", docType=" + docType + "]";
 	}
-	
-	
 
 }

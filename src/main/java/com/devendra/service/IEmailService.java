@@ -4,5 +4,5 @@ import com.devendra.entity.UserReminder;
 
 public interface IEmailService {
 
-	boolean sendReminderMail(UserReminder usrReminder);
+	void sendReminderMail(UserReminder usrReminder);
 }
